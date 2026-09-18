@@ -1,6 +1,0 @@
-{
-  "name": "NCR Cooling Centre",
-  "description": "Professional AC, Refrigerator, Microwave, and Heavy Appliance repair and service provider in Gurgaon.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
