@@ -15,6 +15,18 @@ import { GoogleProfileCard } from '@/components/GoogleProfileCard';
 export default function Home() {
   return (
     <div className="space-y-0">
+      {/* Google Ads Tag (gtag.js) */}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102241242"></script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18102241242');
+          `,
+        }}
+      />
       {/* Hero Section: 50% Name & Title, 50% Google Business Profile Card */}
       <section className="relative bg-gradient-to-br from-[#072c49] via-[#0a4877] to-[#0284c7] text-white overflow-hidden py-10 sm:py-12 lg:py-14">
         {/* Luminous sky blue ambient glows */}
