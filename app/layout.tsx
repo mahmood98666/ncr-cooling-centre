@@ -109,6 +109,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
+      <body className="flex flex-col min-h-screen bg-slate-50 text-slate-900" suppressHydrationWarning>
         {/* Google Ads Tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18102241242"></script>
         <script
@@ -121,12 +127,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             `,
           }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </head>
-      <body className="flex flex-col min-h-screen bg-slate-50 text-slate-900" suppressHydrationWarning>
         <Navbar />
         <main className="flex-grow pb-16 md:pb-0">{children}</main>
         <Footer />
